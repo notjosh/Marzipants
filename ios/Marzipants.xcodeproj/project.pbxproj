@@ -20,6 +20,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		4205610420C9C966008EF196 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205610320C9C966008EF196 /* libRCTText.a */; };
 		425104FF20C981DB004A8D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425104FE20C981DB004A8D79 /* AppDelegate.m */; };
 		4251050120C981DB004A8D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4251050020C981DB004A8D79 /* Assets.xcassets */; };
 		4251050720C981DC004A8D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4251050620C981DC004A8D79 /* main.m */; };
@@ -150,6 +151,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
 			remoteInfo = jschelpers;
+		};
+		4205610220C9C966008EF196 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 420560FF20C9C7D3008EF196;
+			remoteInfo = RCTTextMac;
 		};
 		425108CD20C9847E004A8D79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -335,6 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4205610420C9C966008EF196 /* libRCTText.a in Frameworks */,
 				426AC82E20C9BBE3000B9084 /* libRCTWebSocket.a in Frameworks */,
 				426AC82D20C9BBDA000B9084 /* libReact.a in Frameworks */,
 				426AC83020C9BC73000B9084 /* QuartzCore.framework in Frameworks */,
@@ -532,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				832341B51AAA6A8300B99B32 /* libRCTText.a */,
+				4205610320C9C966008EF196 /* libRCTText.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -830,6 +840,13 @@
 			fileType = archive.ar;
 			path = libjschelpers.a;
 			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4205610320C9C966008EF196 /* libRCTText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTText.a;
+			remoteRef = 4205610220C9C966008EF196 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		425108CE20C9847E004A8D79 /* libReact.a */ = {
