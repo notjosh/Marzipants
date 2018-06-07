@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                moduleName: "Marzipants",
                                initialProperties: nil,
                                launchOptions: launchOptions)!
-//    let rootView = UIView(frame: UIScreen.main.bounds)
-    // green, to make sure we can tell it's ours!
-    rootView.backgroundColor = UIColor.green
+    rootView.backgroundColor = UIColor.white
 
     let rvc = UIViewController()
     rvc.view = rootView
