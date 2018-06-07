@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "425104FA20C981DB004A8D79"
-               BuildableName = "MarzipantsMac.app"
-               BlueprintName = "MarzipantsMac"
+               BlueprintIdentifier = "426AC81920C9B858000B9084"
+               BuildableName = "MarzipantsMacSwift.app"
+               BlueprintName = "MarzipantsMacSwift"
                ReferencedContainer = "container:Marzipants.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "425106F620C98452004A8D79"
-               BuildableName = "libReact.a"
-               BlueprintName = "ReactMac"
-               ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "425104FA20C981DB004A8D79"
-            BuildableName = "MarzipantsMac.app"
-            BlueprintName = "MarzipantsMac"
+            BlueprintIdentifier = "426AC81920C9B858000B9084"
+            BuildableName = "MarzipantsMacSwift.app"
+            BlueprintName = "MarzipantsMacSwift"
             ReferencedContainer = "container:Marzipants.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "425104FA20C981DB004A8D79"
-            BuildableName = "MarzipantsMac.app"
-            BlueprintName = "MarzipantsMac"
+            BlueprintIdentifier = "426AC81920C9B858000B9084"
+            BuildableName = "MarzipantsMacSwift.app"
+            BlueprintName = "MarzipantsMacSwift"
             ReferencedContainer = "container:Marzipants.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,6 +65,11 @@
          <EnvironmentVariable
             key = "CFMZEnabled"
             value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "CFMZEnabled=1"
+            value = ""
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
@@ -95,9 +86,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "425104FA20C981DB004A8D79"
-            BuildableName = "MarzipantsMac.app"
-            BlueprintName = "MarzipantsMac"
+            BlueprintIdentifier = "426AC81920C9B858000B9084"
+            BuildableName = "MarzipantsMacSwift.app"
+            BlueprintName = "MarzipantsMacSwift"
             ReferencedContainer = "container:Marzipants.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

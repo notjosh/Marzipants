@@ -6,8 +6,16 @@
 //  Copyright © 2018 Facebook. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
+#import <UIKit/UIKit.h>
 
-int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
+#import "AppDelegate.h"
+
+int main(int argc, char * argv[]) {
+  @autoreleasepool {
+    return UIApplicationMain(argc,
+                             argv,
+                             NSStringFromClass([NSApplication class]),
+                             NSStringFromClass([AppDelegate class]));
+  }
 }

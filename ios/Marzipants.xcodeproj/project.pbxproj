@@ -24,7 +24,15 @@
 		4251050120C981DB004A8D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4251050020C981DB004A8D79 /* Assets.xcassets */; };
 		4251050720C981DC004A8D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4251050620C981DC004A8D79 /* main.m */; };
 		4251051220C9830E004A8D79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4251051120C9830E004A8D79 /* UIKit.framework */; };
-		425108CF20C9847E004A8D79 /* libReactMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425108CE20C9847E004A8D79 /* libReactMac.a */; };
+		425108CF20C9847E004A8D79 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425108CE20C9847E004A8D79 /* libReact.a */; };
+		425109DB20C9A715004A8D79 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425109DA20C9A715004A8D79 /* libRCTBlob.a */; };
+		426AC7F920C9AB3E000B9084 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426AC7F620C9AB3E000B9084 /* libRCTWebSocket.a */; };
+		426AC81D20C9B858000B9084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AC81C20C9B858000B9084 /* AppDelegate.swift */; };
+		426AC81F20C9B859000B9084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426AC81E20C9B859000B9084 /* Assets.xcassets */; };
+		426AC82820C9B8B7000B9084 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4251051120C9830E004A8D79 /* UIKit.framework */; };
+		426AC82D20C9BBDA000B9084 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425108CE20C9847E004A8D79 /* libReact.a */; };
+		426AC82E20C9BBE3000B9084 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426AC7F620C9AB3E000B9084 /* libRCTWebSocket.a */; };
+		426AC83020C9BC73000B9084 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426AC82F20C9BC72000B9084 /* QuartzCore.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -150,6 +158,76 @@
 			remoteGlobalIDString = 425108CB20C98452004A8D79;
 			remoteInfo = ReactMac;
 		};
+		425109D920C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425109D720C9A628004A8D79;
+			remoteInfo = RCTBlobMac;
+		};
+		425109E320C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425108EA20C988B1004A8D79;
+			remoteInfo = yogaMac;
+		};
+		425109E520C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4251094020C988C2004A8D79;
+			remoteInfo = cxxreactMac;
+		};
+		425109E720C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4251095D20C988CF004A8D79;
+			remoteInfo = jschelpersMac;
+		};
+		425109E920C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4251096720C988D8004A8D79;
+			remoteInfo = jsinspectorMac;
+		};
+		425109EB20C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4251097F20C988E4004A8D79;
+			remoteInfo = "third-partyMac";
+		};
+		425109ED20C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425109A420C988ED004A8D79;
+			remoteInfo = "double-conversionMac";
+		};
+		425109EF20C9A715004A8D79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425109AF20C988F6004A8D79;
+			remoteInfo = privatedataMac;
+		};
+		426AC7F520C9AB3E000B9084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 425109FE20C9A7A4004A8D79;
+			remoteInfo = RCTWebSocketMac;
+		};
+		426AC7F720C9AB3E000B9084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42510A0720C9A7AE004A8D79;
+			remoteInfo = fishhookMac;
+		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -208,6 +286,13 @@
 		4251050620C981DC004A8D79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4251050820C981DC004A8D79 /* MarzipantsMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarzipantsMac.entitlements; sourceTree = "<group>"; };
 		4251051120C9830E004A8D79 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Frameworks/UIKit.framework; sourceTree = "<group>"; };
+		426AC81A20C9B858000B9084 /* MarzipantsMacSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarzipantsMacSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		426AC81C20C9B858000B9084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		426AC81E20C9B859000B9084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		426AC82320C9B859000B9084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426AC82420C9B859000B9084 /* MarzipantsMacSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarzipantsMacSwift.entitlements; sourceTree = "<group>"; };
+		426AC82920C9BAAF000B9084 /* MarzipantsMacSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarzipantsMacSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		426AC82F20C9BC72000B9084 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -239,8 +324,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				425108CF20C9847E004A8D79 /* libReactMac.a in Frameworks */,
+				426AC7F920C9AB3E000B9084 /* libRCTWebSocket.a in Frameworks */,
+				425109DB20C9A715004A8D79 /* libRCTBlob.a in Frameworks */,
+				425108CF20C9847E004A8D79 /* libReact.a in Frameworks */,
 				4251051220C9830E004A8D79 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426AC81720C9B858000B9084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426AC82E20C9BBE3000B9084 /* libRCTWebSocket.a in Frameworks */,
+				426AC82D20C9BBDA000B9084 /* libReact.a in Frameworks */,
+				426AC83020C9BC73000B9084 /* QuartzCore.framework in Frameworks */,
+				426AC82820C9B8B7000B9084 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +414,9 @@
 			isa = PBXGroup;
 			children = (
 				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
+				426AC7F620C9AB3E000B9084 /* libRCTWebSocket.a */,
 				2D16E6841FA4F8DC00B85C8A /* libfishhook.a */,
+				426AC7F820C9AB3E000B9084 /* libfishhook.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,14 +439,21 @@
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
-				425108CE20C9847E004A8D79 /* libReactMac.a */,
+				425108CE20C9847E004A8D79 /* libReact.a */,
 				3DAD3EA51DF850E9000B6D8A /* libyoga.a */,
+				425109E420C9A715004A8D79 /* libyoga.a */,
 				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
+				425109E620C9A715004A8D79 /* libcxxreact.a */,
 				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
+				425109E820C9A715004A8D79 /* libjschelpers.a */,
 				2DF0FFDF2056DD460020B375 /* libjsinspector.a */,
+				425109EA20C9A715004A8D79 /* libjsinspector.a */,
 				2DF0FFE32056DD460020B375 /* libthird-party.a */,
+				425109EC20C9A715004A8D79 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
+				425109EE20C9A715004A8D79 /* libdouble-conversion.a */,
 				2DF0FFEB2056DD460020B375 /* libprivatedata.a */,
+				425109F020C9A715004A8D79 /* libprivatedata.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -354,6 +461,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				426AC82F20C9BC72000B9084 /* QuartzCore.framework */,
 				4251051120C9830E004A8D79 /* UIKit.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 			);
@@ -371,6 +479,18 @@
 				4251050820C981DC004A8D79 /* MarzipantsMac.entitlements */,
 			);
 			path = MarzipantsMac;
+			sourceTree = "<group>";
+		};
+		426AC81B20C9B858000B9084 /* MarzipantsMacSwift */ = {
+			isa = PBXGroup;
+			children = (
+				426AC81C20C9B858000B9084 /* AppDelegate.swift */,
+				426AC81E20C9B859000B9084 /* Assets.xcassets */,
+				426AC82320C9B859000B9084 /* Info.plist */,
+				426AC82420C9B859000B9084 /* MarzipantsMacSwift.entitlements */,
+				426AC82920C9BAAF000B9084 /* MarzipantsMacSwift-Bridging-Header.h */,
+			);
+			path = MarzipantsMacSwift;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -421,6 +541,7 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* Marzipants */,
 				425104FC20C981DB004A8D79 /* MarzipantsMac */,
+				426AC81B20C9B858000B9084 /* MarzipantsMacSwift */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MarzipantsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -436,6 +557,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Marzipants.app */,
 				425104FB20C981DB004A8D79 /* MarzipantsMac.app */,
+				426AC81A20C9B858000B9084 /* MarzipantsMacSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -444,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
+				425109DA20C9A715004A8D79 /* libRCTBlob.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,18 +609,42 @@
 			productReference = 425104FB20C981DB004A8D79 /* MarzipantsMac.app */;
 			productType = "com.apple.product-type.application";
 		};
+		426AC81920C9B858000B9084 /* MarzipantsMacSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426AC82520C9B859000B9084 /* Build configuration list for PBXNativeTarget "MarzipantsMacSwift" */;
+			buildPhases = (
+				426AC81620C9B858000B9084 /* Sources */,
+				426AC81720C9B858000B9084 /* Frameworks */,
+				426AC81820C9B858000B9084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarzipantsMacSwift;
+			productName = MarzipantsMacSwift;
+			productReference = 426AC81A20C9B858000B9084 /* MarzipantsMacSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					425104FA20C981DB004A8D79 = {
 						CreatedOnToolsVersion = 10.0;
 						DevelopmentTeam = 2XN7W4EZ34;
+						ProvisioningStyle = Automatic;
+					};
+					426AC81920C9B858000B9084 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = 2XN7W4EZ34;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -567,6 +714,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* Marzipants */,
 				425104FA20C981DB004A8D79 /* MarzipantsMac */,
+				426AC81920C9B858000B9084 /* MarzipantsMacSwift */,
 			);
 		};
 /* End PBXProject section */
@@ -684,11 +832,81 @@
 			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		425108CE20C9847E004A8D79 /* libReactMac.a */ = {
+		425108CE20C9847E004A8D79 /* libReact.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libReactMac.a;
+			path = libReact.a;
 			remoteRef = 425108CD20C9847E004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109DA20C9A715004A8D79 /* libRCTBlob.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTBlob.a;
+			remoteRef = 425109D920C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109E420C9A715004A8D79 /* libyoga.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyoga.a;
+			remoteRef = 425109E320C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109E620C9A715004A8D79 /* libcxxreact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcxxreact.a;
+			remoteRef = 425109E520C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109E820C9A715004A8D79 /* libjschelpers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjschelpers.a;
+			remoteRef = 425109E720C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109EA20C9A715004A8D79 /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = 425109E920C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109EC20C9A715004A8D79 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 425109EB20C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109EE20C9A715004A8D79 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 425109ED20C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		425109F020C9A715004A8D79 /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = 425109EF20C9A715004A8D79 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426AC7F620C9AB3E000B9084 /* libRCTWebSocket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTWebSocket.a;
+			remoteRef = 426AC7F520C9AB3E000B9084 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426AC7F820C9AB3E000B9084 /* libfishhook.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfishhook.a;
+			remoteRef = 426AC7F720C9AB3E000B9084 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
@@ -739,6 +957,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		426AC81820C9B858000B9084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426AC81F20C9B859000B9084 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -774,6 +1000,14 @@
 			files = (
 				4251050720C981DC004A8D79 /* main.m in Sources */,
 				425104FF20C981DB004A8D79 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426AC81620C9B858000B9084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426AC81D20C9B858000B9084 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,7 +1067,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -858,12 +1091,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = MarzipantsMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.MarzipantsMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -876,7 +1113,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -901,14 +1137,122 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = MarzipantsMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.MarzipantsMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		426AC82620C9B859000B9084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MarzipantsMacSwift/MarzipantsMacSwift.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2XN7W4EZ34;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = MarzipantsMacSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.MarzipantsMacSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "MarzipantsMacSwift/MarzipantsMacSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		426AC82720C9B859000B9084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MarzipantsMacSwift/MarzipantsMacSwift.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2XN7W4EZ34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = MarzipantsMacSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.notjosh.MarzipantsMacSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "MarzipantsMacSwift/MarzipantsMacSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1005,6 +1349,15 @@
 			buildConfigurations = (
 				4251050A20C981DC004A8D79 /* Debug */,
 				4251050B20C981DC004A8D79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426AC82520C9B859000B9084 /* Build configuration list for PBXNativeTarget "MarzipantsMacSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426AC82620C9B859000B9084 /* Debug */,
+				426AC82720C9B859000B9084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

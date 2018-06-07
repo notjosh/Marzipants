@@ -13,6 +13,10 @@
 
 @implementation AppDelegate
 
++ (BOOL)registerAsSystemApp {
+  return YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
