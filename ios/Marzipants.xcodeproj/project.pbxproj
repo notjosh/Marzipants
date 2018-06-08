@@ -22,6 +22,8 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		4205444B20CB3897000B3320 /* UIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205444A20CB3897000B3320 /* UIFoundation.framework */; };
 		4205444C20CB3897000B3320 /* UIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205444A20CB3897000B3320 /* UIFoundation.framework */; };
+		4243EBB020CB4E0100A68CA9 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243EBAF20CB4E0100A68CA9 /* libRCTLinking.a */; };
+		4243EBB120CB4E0900A68CA9 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425109DA20C9A715004A8D79 /* libRCTBlob.a */; };
 		425104FF20C981DB004A8D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425104FE20C981DB004A8D79 /* AppDelegate.m */; };
 		4251050120C981DB004A8D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4251050020C981DB004A8D79 /* Assets.xcassets */; };
 		4251050720C981DC004A8D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4251050620C981DC004A8D79 /* main.m */; };
@@ -160,6 +162,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 420560FF20C9C7D3008EF196;
 			remoteInfo = RCTTextMac;
+		};
+		4243EBAE20CB4E0100A68CA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4243EBAC20CB4D8200A68CA9;
+			remoteInfo = RCTLinkingMac;
 		};
 		425108CD20C9847E004A8D79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -347,6 +356,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4243EBB120CB4E0900A68CA9 /* libRCTBlob.a in Frameworks */,
+				4243EBB020CB4E0100A68CA9 /* libRCTLinking.a in Frameworks */,
 				4253E5A020CB445E000C985C /* libRCTText.a in Frameworks */,
 				426AC82E20C9BBE3000B9084 /* libRCTWebSocket.a in Frameworks */,
 				4205444C20CB3897000B3320 /* UIFoundation.framework in Frameworks */,
@@ -520,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				78C398B91ACF4ADC00677621 /* libRCTLinking.a */,
+				4243EBAF20CB4E0100A68CA9 /* libRCTLinking.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -853,6 +865,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 4205610220C9C966008EF196 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4243EBAF20CB4E0100A68CA9 /* libRCTLinking.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTLinking.a;
+			remoteRef = 4243EBAE20CB4E0100A68CA9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		425108CE20C9847E004A8D79 /* libReact.a */ = {
