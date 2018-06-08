@@ -20,13 +20,15 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		4205610420C9C966008EF196 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205610320C9C966008EF196 /* libRCTText.a */; };
+		4205444B20CB3897000B3320 /* UIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205444A20CB3897000B3320 /* UIFoundation.framework */; };
+		4205444C20CB3897000B3320 /* UIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205444A20CB3897000B3320 /* UIFoundation.framework */; };
 		425104FF20C981DB004A8D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425104FE20C981DB004A8D79 /* AppDelegate.m */; };
 		4251050120C981DB004A8D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4251050020C981DB004A8D79 /* Assets.xcassets */; };
 		4251050720C981DC004A8D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4251050620C981DC004A8D79 /* main.m */; };
 		4251051220C9830E004A8D79 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4251051120C9830E004A8D79 /* UIKit.framework */; };
 		425108CF20C9847E004A8D79 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425108CE20C9847E004A8D79 /* libReact.a */; };
 		425109DB20C9A715004A8D79 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425109DA20C9A715004A8D79 /* libRCTBlob.a */; };
+		4253E5A020CB445E000C985C /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205610320C9C966008EF196 /* libRCTText.a */; };
 		426AC7F920C9AB3E000B9084 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 426AC7F620C9AB3E000B9084 /* libRCTWebSocket.a */; };
 		426AC81D20C9B858000B9084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426AC81C20C9B858000B9084 /* AppDelegate.swift */; };
 		426AC81F20C9B859000B9084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426AC81E20C9B859000B9084 /* Assets.xcassets */; };
@@ -286,6 +288,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Marzipants/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4205444920CA832C000B3320 /* Tea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tea.h; sourceTree = "<group>"; };
+		4205444A20CB3897000B3320 /* UIFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIFoundation.framework; path = Frameworks/UIFoundation.framework; sourceTree = "<group>"; };
 		425104FB20C981DB004A8D79 /* MarzipantsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarzipantsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425104FD20C981DB004A8D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		425104FE20C981DB004A8D79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 				425109DB20C9A715004A8D79 /* libRCTBlob.a in Frameworks */,
 				425108CF20C9847E004A8D79 /* libReact.a in Frameworks */,
 				4251051220C9830E004A8D79 /* UIKit.framework in Frameworks */,
+				4205444B20CB3897000B3320 /* UIFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,8 +348,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4205610420C9C966008EF196 /* libRCTText.a in Frameworks */,
+				4253E5A020CB445E000C985C /* libRCTText.a in Frameworks */,
 				426AC82E20C9BBE3000B9084 /* libRCTWebSocket.a in Frameworks */,
+				4205444C20CB3897000B3320 /* UIFoundation.framework in Frameworks */,
 				426AC82D20C9BBDA000B9084 /* libReact.a in Frameworks */,
 				426AC83020C9BC73000B9084 /* QuartzCore.framework in Frameworks */,
 				426AC82820C9B8B7000B9084 /* UIKit.framework in Frameworks */,
@@ -471,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				426AC82F20C9BC72000B9084 /* QuartzCore.framework */,
+				4205444A20CB3897000B3320 /* UIFoundation.framework */,
 				4251051120C9830E004A8D79 /* UIKit.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 			);
@@ -494,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				426AC81C20C9B858000B9084 /* AppDelegate.swift */,
+				4205444920CA832C000B3320 /* Tea.h */,
 				426AC81E20C9B859000B9084 /* Assets.xcassets */,
 				426AC82320C9B859000B9084 /* Info.plist */,
 				426AC82420C9B859000B9084 /* MarzipantsMacSwift.entitlements */,
