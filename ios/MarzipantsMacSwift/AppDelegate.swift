@@ -17,10 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-    let jsCodeLocation = RCTBundleURLProvider.sharedSettings()?.jsBundleURL(forBundleRoot: "index", fallbackResource: nil)
+//    let bundleRoot = "index"
+//    let moduleName = "Marzipants"
+    let bundleRoot = "RNTester/RNTesterApp.ios"
+    let moduleName = "RNTesterApp"
+
+
+    let jsCodeLocation = RCTBundleURLProvider.sharedSettings()?.jsBundleURL(forBundleRoot: bundleRoot, fallbackResource: nil)
+
 
     let rootView = RCTRootView(bundleURL: jsCodeLocation,
-                               moduleName: "Marzipants",
+                               moduleName: moduleName,
                                initialProperties: nil,
                                launchOptions: launchOptions)!
     rootView.backgroundColor = UIColor.white

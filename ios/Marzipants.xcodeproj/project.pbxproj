@@ -288,7 +288,6 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Marzipants/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4205444920CA832C000B3320 /* Tea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tea.h; sourceTree = "<group>"; };
 		4205444A20CB3897000B3320 /* UIFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIFoundation.framework; path = Frameworks/UIFoundation.framework; sourceTree = "<group>"; };
 		425104FB20C981DB004A8D79 /* MarzipantsMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarzipantsMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		425104FD20C981DB004A8D79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -501,7 +500,6 @@
 			isa = PBXGroup;
 			children = (
 				426AC81C20C9B858000B9084 /* AppDelegate.swift */,
-				4205444920CA832C000B3320 /* Tea.h */,
 				426AC81E20C9B859000B9084 /* Assets.xcassets */,
 				426AC82320C9B859000B9084 /* Info.plist */,
 				426AC82420C9B859000B9084 /* MarzipantsMacSwift.entitlements */,
