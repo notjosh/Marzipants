@@ -24,6 +24,7 @@
 		4205444C20CB3897000B3320 /* UIFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4205444A20CB3897000B3320 /* UIFoundation.framework */; };
 		4243EBB020CB4E0100A68CA9 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243EBAF20CB4E0100A68CA9 /* libRCTLinking.a */; };
 		4243EBB120CB4E0900A68CA9 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 425109DA20C9A715004A8D79 /* libRCTBlob.a */; };
+		4243EBC120CB4EF600A68CA9 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4243EBC020CB4EF600A68CA9 /* libRCTNetwork.a */; };
 		425104FF20C981DB004A8D79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 425104FE20C981DB004A8D79 /* AppDelegate.m */; };
 		4251050120C981DB004A8D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4251050020C981DB004A8D79 /* Assets.xcassets */; };
 		4251050720C981DC004A8D79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4251050620C981DC004A8D79 /* main.m */; };
@@ -169,6 +170,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 4243EBAC20CB4D8200A68CA9;
 			remoteInfo = RCTLinkingMac;
+		};
+		4243EBBF20CB4EF600A68CA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4243EBBD20CB4E5F00A68CA9;
+			remoteInfo = RCTNetworkMac;
 		};
 		425108CD20C9847E004A8D79 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -356,6 +364,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4243EBC120CB4EF600A68CA9 /* libRCTNetwork.a in Frameworks */,
 				4243EBB120CB4E0900A68CA9 /* libRCTBlob.a in Frameworks */,
 				4243EBB020CB4E0100A68CA9 /* libRCTLinking.a in Frameworks */,
 				4253E5A020CB445E000C985C /* libRCTText.a in Frameworks */,
@@ -398,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */,
+				4243EBC020CB4EF600A68CA9 /* libRCTNetwork.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -872,6 +882,13 @@
 			fileType = archive.ar;
 			path = libRCTLinking.a;
 			remoteRef = 4243EBAE20CB4E0100A68CA9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4243EBC020CB4EF600A68CA9 /* libRCTNetwork.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTNetwork.a;
+			remoteRef = 4243EBBF20CB4EF600A68CA9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		425108CE20C9847E004A8D79 /* libReact.a */ = {
