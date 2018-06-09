@@ -8,17 +8,22 @@ But, like, it's proof that we don't need Electron, right? 💪
 
 Check out [biscuitehh/MarzipanPlatter](https://github.com/biscuitehh/MarzipanPlatter) for a nice guide on getting Marzipan running.
 
-## It's ⚡️Extremely Broken⚡️
+## It's ✨Reasonably Good✨
 
-A bunch of useful stuff isn't available (?!) under Marzipan, most notably here is `NSTextStorage`, so text measurement and drawing is...broken.
+It's surprising how well it's working. Besides the obvious mobile-specific things, it's running abouuuut as well as tvOS builds of React Native.
+
+I wouldn't recommend using it. Ever. C'mon now.
 
 ## How It Looks
 
-![](http://hi.notjo.sh/3o3X070X2h1T/notjosh_2018-Jun-08.jpg)
+I have some screenshots* of the [RNTester](https://github.com/facebook/react-native/tree/master/RNTester) sample application from React Native.
 
-That's the real actual `App.js` that you'd get from `react-native init` running.
+(*photos, lols. My UI server dies _hard_ the second my Touchbar becomes active, which my screenshot shortcut does. Ehhh)
 
-Weirdly, I can't take screenshots while Marzipan is running. I think it's arguing with the Touchbar UI server? Who knows.
+![](http://hi.notjo.sh/2c2W2w0J0U2M/DfNVhQUXUAIFt7b.jpg%20large.jpeg)
+![](http://hi.notjo.sh/3o2f153c3h3n/DfNVeu0XcAEuLcM.jpg%20large.jpeg)
+![](http://hi.notjo.sh/1B03143k2m0t/DfNVhS9W4AIUVG9.jpg%20large.jpeg)
+![](http://hi.notjo.sh/3w3L2s3H2T1d/DfNVhNeXcAA4S-I.jpg%20large.jpeg)
 
 ## This Repo
 
