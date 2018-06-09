@@ -330,11 +330,11 @@ const APIExamples: Array<RNTesterExample> = [
     module: require('./PointerEventsExample'),
     supportsTVOS: false,
   },
-  {
-    key: 'PushNotificationIOSExample',
-    module: require('./PushNotificationIOSExample'),
-    supportsTVOS: false,
-  },
+  // {
+  //   key: 'PushNotificationIOSExample',
+  //   module: require('./PushNotificationIOSExample'),
+  //   supportsTVOS: false,
+  // },
   {
     key: 'RCTRootViewIOSExample',
     module: require('./RCTRootViewIOSExample'),
