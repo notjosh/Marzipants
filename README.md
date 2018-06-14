@@ -29,4 +29,7 @@ I have some screenshots* of the [RNTester](https://github.com/facebook/react-nat
 
 I've committed everything. EVERYTHING. `node_modules`, especially, because that's where the bulk of the changes were.
 
-You should be able to pull it down and have everything you need. Just run the `MarzipantsMacSwift` target, and you too have an unstable UI server and a poorly rendered app!
+### How to run
+
+- Follow all the [MarzipanPlatter instructions first](https://github.com/biscuitehh/MarzipanPlatter)
+- Open the Xcode project, run the `MarzipantsMacSwift` target, and you too have an unstable UI server and a poorly rendered app!
