@@ -1,25 +1,21 @@
 /**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
- * additional grant of patent rights can be found in the PATENTS file in
- * the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 "use strict";
 
 import assert from "assert";
-import * as t from "babel-types";
 import { hoist } from "./hoist";
 import { Emitter } from "./emit";
 import replaceShorthandObjectMethod from "./replaceShorthandObjectMethod";
 import * as util from "./util";
 
-exports.visitor = {
+exports.getVisitor = ({ types: t }) => ({
   Function: {
-    exit: function(path, state) {
+    exit: util.wrapWithTypes(t, function(path, state) {
       let node = path.node;
 
       if (node.generator) {
@@ -158,15 +154,16 @@ exports.visitor = {
       // an ES5 AST, but that means traversal will not pick up newly inserted references
       // to things like 'regeneratorRuntime'. To avoid this, we explicitly requeue.
       path.requeue();
-    }
+    })
   }
-};
+});
 
 // Given a NodePath for a Function, return an Expression node that can be
 // used to refer reliably to the function object from inside the function.
 // This expression is essentially a replacement for arguments.callee, with
 // the key advantage that it works in strict mode.
 function getOuterFnExpr(funPath) {
+  const t = util.getTypes();
   let node = funPath.node;
   t.assertFunction(node);
 
@@ -188,6 +185,7 @@ function getOuterFnExpr(funPath) {
 const getMarkInfo = require("private").makeAccessor();
 
 function getMarkedFunctionId(funPath) {
+  const t = util.getTypes();
   const node = funPath.node;
   t.assertIdentifier(node.id);
 
@@ -264,8 +262,16 @@ let functionSentVisitor = {
   MetaProperty(path) {
     let { node } = path;
 
-    if (node.meta.name === "function" && node.property.name === "sent") {
-      util.replaceWithOrRemove(path, t.memberExpression(this.context, t.identifier("_sent")));
+    if (node.meta.name === "function" &&
+        node.property.name === "sent") {
+      const t = util.getTypes();
+      util.replaceWithOrRemove(
+        path,
+        t.memberExpression(
+          this.context,
+          t.identifier("_sent")
+        )
+      );
     }
   }
 };
@@ -276,6 +282,8 @@ let awaitVisitor = {
   },
 
   AwaitExpression: function(path) {
+    const t = util.getTypes();
+
     // Convert await expressions to yield expressions.
     let argument = path.node.argument;
 

@@ -1,20 +1,18 @@
 /**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
- * additional grant of patent rights can be found in the PATENTS file in
- * the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 import assert from "assert";
+import { getTypes } from "./util.js";
 let m = require("private").makeAccessor();
-import * as t from "babel-types";
 let hasOwn = Object.prototype.hasOwnProperty;
 
 function makePredicate(propertyName, knownTypes) {
   function onlyChildren(node) {
+    const t = getTypes();
     t.assertNode(node);
 
     // Assume no side effects until we find out otherwise.
@@ -45,7 +43,7 @@ function makePredicate(propertyName, knownTypes) {
   }
 
   function predicate(node) {
-    t.assertNode(node);
+    getTypes().assertNode(node);
 
     let meta = m(node);
     if (hasOwn.call(meta, propertyName))

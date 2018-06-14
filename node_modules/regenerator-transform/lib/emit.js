@@ -1,16 +1,8 @@
 "use strict";
 
-var _stringify = require("babel-runtime/core-js/json/stringify");
-
-var _stringify2 = _interopRequireDefault(_stringify);
-
 var _assert = require("assert");
 
 var _assert2 = _interopRequireDefault(_assert);
-
-var _babelTypes = require("babel-types");
-
-var t = _interopRequireWildcard(_babelTypes);
 
 var _leap = require("./leap");
 
@@ -28,19 +20,19 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var hasOwn = Object.prototype.hasOwnProperty; /**
-                                               * Copyright (c) 2014, Facebook, Inc.
-                                               * All rights reserved.
-                                               *
-                                               * This source code is licensed under the BSD-style license found in the
-                                               * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
-                                               * additional grant of patent rights can be found in the PATENTS file in
-                                               * the same directory.
-                                               */
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var hasOwn = Object.prototype.hasOwnProperty;
 
 function Emitter(contextId) {
   _assert2.default.ok(this instanceof Emitter);
-  t.assertIdentifier(contextId);
+
+  util.getTypes().assertIdentifier(contextId);
 
   // Used to generate unique temporary names.
   this.nextTempId = 0;
@@ -81,13 +73,13 @@ exports.Emitter = Emitter;
 // location to be determined at any time, even after generating code that
 // refers to the location.
 function loc() {
-  return t.numericLiteral(-1);
+  return util.getTypes().numericLiteral(-1);
 }
 
 // Sets the exact value of the given location to the offset of the next
 // Statement emitted.
 Ep.mark = function (loc) {
-  t.assertLiteral(loc);
+  util.getTypes().assertLiteral(loc);
   var index = this.listing.length;
   if (loc.value === -1) {
     loc.value = index;
@@ -101,6 +93,8 @@ Ep.mark = function (loc) {
 };
 
 Ep.emit = function (node) {
+  var t = util.getTypes();
+
   if (t.isExpression(node)) {
     node = t.expressionStatement(node);
   }
@@ -118,12 +112,14 @@ Ep.emitAssign = function (lhs, rhs) {
 
 // Shorthand for an assignment statement.
 Ep.assign = function (lhs, rhs) {
+  var t = util.getTypes();
   return t.expressionStatement(t.assignmentExpression("=", lhs, rhs));
 };
 
 // Convenience function for generating expressions like context.next,
 // context.sent, and context.rval.
 Ep.contextProperty = function (name, computed) {
+  var t = util.getTypes();
   return t.memberExpression(this.contextId, computed ? t.stringLiteral(name) : t.identifier(name), !!computed);
 };
 
@@ -137,12 +133,14 @@ Ep.stop = function (rval) {
 };
 
 Ep.setReturnValue = function (valuePath) {
-  t.assertExpression(valuePath.value);
+  util.getTypes().assertExpression(valuePath.value);
 
   this.emitAssign(this.contextProperty("rval"), this.explodeExpression(valuePath));
 };
 
 Ep.clearPendingException = function (tryLoc, assignee) {
+  var t = util.getTypes();
+
   t.assertLiteral(tryLoc);
 
   var catchCall = t.callExpression(this.contextProperty("catch", true), [tryLoc]);
@@ -158,11 +156,13 @@ Ep.clearPendingException = function (tryLoc, assignee) {
 // exact value of the location is not yet known.
 Ep.jump = function (toLoc) {
   this.emitAssign(this.contextProperty("next"), toLoc);
-  this.emit(t.breakStatement());
+  this.emit(util.getTypes().breakStatement());
 };
 
 // Conditional jump.
 Ep.jumpIf = function (test, toLoc) {
+  var t = util.getTypes();
+
   t.assertExpression(test);
   t.assertLiteral(toLoc);
 
@@ -171,6 +171,8 @@ Ep.jumpIf = function (test, toLoc) {
 
 // Conditional jump, with the condition negated.
 Ep.jumpIfNot = function (test, toLoc) {
+  var t = util.getTypes();
+
   t.assertExpression(test);
   t.assertLiteral(toLoc);
 
@@ -195,6 +197,8 @@ Ep.makeTempVar = function () {
 };
 
 Ep.getContextFunction = function (id) {
+  var t = util.getTypes();
+
   return t.functionExpression(id || null /*Anonymous*/
   , [this.contextId], t.blockStatement([this.getDispatchLoop()]), false, // Not a generator anymore!
   false // Nor an expression.
@@ -214,6 +218,7 @@ Ep.getContextFunction = function (id) {
 // case statement.
 Ep.getDispatchLoop = function () {
   var self = this;
+  var t = util.getTypes();
   var cases = [];
   var current = void 0;
 
@@ -257,6 +262,7 @@ Ep.getTryLocsList = function () {
     return null;
   }
 
+  var t = util.getTypes();
   var lastLocValue = 0;
 
   return t.arrayExpression(this.tryEntries.map(function (tryEntry) {
@@ -288,6 +294,7 @@ Ep.getTryLocsList = function () {
 // No destructive modification of AST nodes.
 
 Ep.explode = function (path, ignoreResult) {
+  var t = util.getTypes();
   var node = path.node;
   var self = this;
 
@@ -314,15 +321,16 @@ Ep.explode = function (path, ignoreResult) {
       throw new Error(node.type + " nodes should be handled by their parents");
 
     default:
-      throw new Error("unknown Node of type " + (0, _stringify2.default)(node.type));
+      throw new Error("unknown Node of type " + JSON.stringify(node.type));
   }
 };
 
 function getDeclError(node) {
-  return new Error("all declarations should have been transformed into " + "assignments before the Exploder began its work: " + (0, _stringify2.default)(node));
+  return new Error("all declarations should have been transformed into " + "assignments before the Exploder began its work: " + JSON.stringify(node));
 }
 
 Ep.explodeStatement = function (path, labelId) {
+  var t = util.getTypes();
   var stmt = path.node;
   var self = this;
   var before = void 0,
@@ -645,7 +653,7 @@ Ep.explodeStatement = function (path, labelId) {
       break;
 
     default:
-      throw new Error("unknown Statement of type " + (0, _stringify2.default)(stmt.type));
+      throw new Error("unknown Statement of type " + JSON.stringify(stmt.type));
   }
 };
 
@@ -667,11 +675,12 @@ var catchParamVisitor = {
 
 Ep.emitAbruptCompletion = function (record) {
   if (!isValidCompletion(record)) {
-    _assert2.default.ok(false, "invalid completion record: " + (0, _stringify2.default)(record));
+    _assert2.default.ok(false, "invalid completion record: " + JSON.stringify(record));
   }
 
   _assert2.default.notStrictEqual(record.type, "normal", "normal completions are not abrupt");
 
+  var t = util.getTypes();
   var abruptArgs = [t.stringLiteral(record.type)];
 
   if (record.type === "break" || record.type === "continue") {
@@ -695,7 +704,7 @@ function isValidCompletion(record) {
   }
 
   if (type === "break" || type === "continue") {
-    return !hasOwn.call(record, "value") && t.isLiteral(record.target);
+    return !hasOwn.call(record, "value") && util.getTypes().isLiteral(record.target);
   }
 
   if (type === "return" || type === "throw") {
@@ -715,7 +724,7 @@ function isValidCompletion(record) {
 // targets, but minimizing the number of switch cases keeps the generated
 // code shorter.
 Ep.getUnmarkedCurrentLoc = function () {
-  return t.numericLiteral(this.listing.length);
+  return util.getTypes().numericLiteral(this.listing.length);
 };
 
 // The context.prev property takes the value of context.next whenever we
@@ -730,7 +739,7 @@ Ep.getUnmarkedCurrentLoc = function () {
 // be costly and verbose to set context.prev before every statement.
 Ep.updateContextPrevLoc = function (loc) {
   if (loc) {
-    t.assertLiteral(loc);
+    util.getTypes().assertLiteral(loc);
 
     if (loc.value === -1) {
       // If an uninitialized location literal was passed in, set its value
@@ -751,6 +760,7 @@ Ep.updateContextPrevLoc = function (loc) {
 };
 
 Ep.explodeExpression = function (path, ignoreResult) {
+  var t = util.getTypes();
   var expr = path.node;
   if (expr) {
     t.assertExpression(expr);
@@ -977,20 +987,27 @@ Ep.explodeExpression = function (path, ignoreResult) {
       if (arg && expr.delegate) {
         var _result = self.makeTempVar();
 
-        self.emit(t.returnStatement(t.callExpression(self.contextProperty("delegateYield"), [arg, t.stringLiteral(_result.property.name), after])));
+        var _ret = t.returnStatement(t.callExpression(self.contextProperty("delegateYield"), [arg, t.stringLiteral(_result.property.name), after]));
+        _ret.loc = expr.loc;
 
+        self.emit(_ret);
         self.mark(after);
 
         return _result;
       }
 
       self.emitAssign(self.contextProperty("next"), after);
-      self.emit(t.returnStatement(arg || null));
+
+      var ret = t.returnStatement(arg || null);
+      // Preserve the `yield` location so that source mappings for the statements
+      // link back to the yield properly.
+      ret.loc = expr.loc;
+      self.emit(ret);
       self.mark(after);
 
       return self.contextProperty("sent");
 
     default:
-      throw new Error("unknown Expression of type " + (0, _stringify2.default)(expr.type));
+      throw new Error("unknown Expression of type " + JSON.stringify(expr.type));
   }
 };

@@ -1,16 +1,13 @@
 /**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
+ * Copyright (c) 2014-present, Facebook, Inc.
  *
- * This source code is licensed under the BSD-style license found in the
- * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
- * additional grant of patent rights can be found in the PATENTS file in
- * the same directory.
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 
 export default function (context) {
   const plugin = {
-    visitor: require("./visit").visitor,
+    visitor: require("./visit").getVisitor(context),
   };
 
   // Some presets manually call child presets, but fail to pass along the

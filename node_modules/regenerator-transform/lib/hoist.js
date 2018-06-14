@@ -1,30 +1,10 @@
 "use strict";
 
-var _keys = require("babel-runtime/core-js/object/keys");
-
-var _keys2 = _interopRequireDefault(_keys);
-
-var _babelTypes = require("babel-types");
-
-var t = _interopRequireWildcard(_babelTypes);
-
 var _util = require("./util");
 
 var util = _interopRequireWildcard(_util);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * Copyright (c) 2014, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
- * additional grant of patent rights can be found in the PATENTS file in
- * the same directory.
- */
 
 var hasOwn = Object.prototype.hasOwnProperty;
 
@@ -32,7 +12,15 @@ var hasOwn = Object.prototype.hasOwnProperty;
 // and replaces any Declaration nodes in its body with assignments, then
 // returns a VariableDeclaration containing just the names of the removed
 // declarations.
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 exports.hoist = function (funPath) {
+  var t = util.getTypes();
   t.assertFunction(funPath.node);
 
   var vars = {};
@@ -97,7 +85,7 @@ exports.hoist = function (funPath) {
       var node = path.node;
       vars[node.id.name] = node.id;
 
-      var assignment = t.expressionStatement(t.assignmentExpression("=", node.id, t.functionExpression(node.id, node.params, node.body, node.generator, node.expression)));
+      var assignment = t.expressionStatement(t.assignmentExpression("=", node.id, t.functionExpression(path.scope.generateUidIdentifierBasedOnNode(node), node.params, node.body, node.generator, node.expression)));
 
       if (path.parentPath.isBlockStatement()) {
         // Insert the assignment form before the first statement in the
@@ -121,6 +109,11 @@ exports.hoist = function (funPath) {
     FunctionExpression: function FunctionExpression(path) {
       // Don't descend into nested function expressions.
       path.skip();
+    },
+
+    ArrowFunctionExpression: function ArrowFunctionExpression(path) {
+      // Don't descend into nested function expressions.
+      path.skip();
     }
   });
 
@@ -137,7 +130,7 @@ exports.hoist = function (funPath) {
 
   var declarations = [];
 
-  (0, _keys2.default)(vars).forEach(function (name) {
+  Object.keys(vars).forEach(function (name) {
     if (!hasOwn.call(paramNames, name)) {
       declarations.push(t.variableDeclarator(vars[name], null));
     }

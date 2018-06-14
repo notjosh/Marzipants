@@ -3,10 +3,6 @@
 exports.__esModule = true;
 exports.default = replaceShorthandObjectMethod;
 
-var _babelTypes = require("babel-types");
-
-var t = _interopRequireWildcard(_babelTypes);
-
 var _util = require("./util");
 
 var util = _interopRequireWildcard(_util);
@@ -42,6 +38,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // If this function is called with an AST node path that is not a Function (or with an
 // argument that isn't an AST node path), it will throw an error.
 function replaceShorthandObjectMethod(path) {
+  var t = util.getTypes();
+
   if (!path.node || !t.isFunction(path.node)) {
     throw new Error("replaceShorthandObjectMethod can only be called on Function AST node paths.");
   }
@@ -77,4 +75,9 @@ function replaceShorthandObjectMethod(path) {
   // the FunctionExpression we just created is the value of the ObjectProperty,
   // so return the "value" path off of this path.
   return path.get("value");
-}
+} /**
+   * Copyright (c) 2014-present, Facebook, Inc.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
