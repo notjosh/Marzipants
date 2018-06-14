@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "425106F620C98452004A8D79"
+               BuildableName = "libReact.a"
+               BlueprintName = "ReactMac"
+               ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "426AC81920C9B858000B9084"
                BuildableName = "MarzipantsMacSwift.app"
                BlueprintName = "MarzipantsMacSwift"
