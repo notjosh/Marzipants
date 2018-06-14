@@ -38,3 +38,4 @@ I've committed everything. EVERYTHING. `node_modules`, especially, because that'
 - Run react-native server: `npm install -g react-native; react-native start`
 - Find in Xcode the built app (in Products group, find MarzipantsMacSwift.app -> Open in Finder), copy path to it
 - Run the built app via CLI: `CFMZEnabled=1 open path-to-the-MarzipantsMacSwift.app`
+- If you open some screen you shouldn't have and you keep getting the red screen at launch, delete `~/Library/Containers/com.notjosh.MarzipantsMacSwift`
