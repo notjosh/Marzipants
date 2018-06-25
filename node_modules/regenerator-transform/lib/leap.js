@@ -4,31 +4,24 @@ var _assert = require("assert");
 
 var _assert2 = _interopRequireDefault(_assert);
 
-var _babelTypes = require("babel-types");
-
-var t = _interopRequireWildcard(_babelTypes);
-
 var _util = require("util");
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+var _util2 = require("./util.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Entry() {
   _assert2.default.ok(this instanceof Entry);
 } /**
-   * Copyright (c) 2014, Facebook, Inc.
-   * All rights reserved.
+   * Copyright (c) 2014-present, Facebook, Inc.
    *
-   * This source code is licensed under the BSD-style license found in the
-   * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
-   * additional grant of patent rights can be found in the PATENTS file in
-   * the same directory.
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
    */
 
 function FunctionEntry(returnLoc) {
   Entry.call(this);
-  t.assertLiteral(returnLoc);
+  (0, _util2.getTypes)().assertLiteral(returnLoc);
   this.returnLoc = returnLoc;
 }
 
@@ -37,6 +30,8 @@ exports.FunctionEntry = FunctionEntry;
 
 function LoopEntry(breakLoc, continueLoc, label) {
   Entry.call(this);
+
+  var t = (0, _util2.getTypes)();
 
   t.assertLiteral(breakLoc);
   t.assertLiteral(continueLoc);
@@ -57,7 +52,7 @@ exports.LoopEntry = LoopEntry;
 
 function SwitchEntry(breakLoc) {
   Entry.call(this);
-  t.assertLiteral(breakLoc);
+  (0, _util2.getTypes)().assertLiteral(breakLoc);
   this.breakLoc = breakLoc;
 }
 
@@ -67,6 +62,7 @@ exports.SwitchEntry = SwitchEntry;
 function TryEntry(firstLoc, catchEntry, finallyEntry) {
   Entry.call(this);
 
+  var t = (0, _util2.getTypes)();
   t.assertLiteral(firstLoc);
 
   if (catchEntry) {
@@ -95,6 +91,8 @@ exports.TryEntry = TryEntry;
 function CatchEntry(firstLoc, paramId) {
   Entry.call(this);
 
+  var t = (0, _util2.getTypes)();
+
   t.assertLiteral(firstLoc);
   t.assertIdentifier(paramId);
 
@@ -107,6 +105,7 @@ exports.CatchEntry = CatchEntry;
 
 function FinallyEntry(firstLoc, afterLoc) {
   Entry.call(this);
+  var t = (0, _util2.getTypes)();
   t.assertLiteral(firstLoc);
   t.assertLiteral(afterLoc);
   this.firstLoc = firstLoc;
@@ -118,6 +117,8 @@ exports.FinallyEntry = FinallyEntry;
 
 function LabeledEntry(breakLoc, label) {
   Entry.call(this);
+
+  var t = (0, _util2.getTypes)();
 
   t.assertLiteral(breakLoc);
   t.assertIdentifier(label);

@@ -29,4 +29,14 @@ I have some screenshots* of the [RNTester](https://github.com/facebook/react-nat
 
 I've committed everything. EVERYTHING. `node_modules`, especially, because that's where the bulk of the changes were.
 
-You should be able to pull it down and have everything you need. Just run the `MarzipantsMacSwift` target, and you too have an unstable UI server and a poorly rendered app!
+### How to run
+
+- Follow all the [MarzipanPlatter instructions first](https://github.com/biscuitehh/MarzipanPlatter)
+- Install `node` if you don't have it yet (`brew install node`)
+- Open the Xcode project, run the `MarzipantsMacSwift` target, and you too have an unstable UI server and a poorly rendered app!
+- If the app fails to compile, try building the ReactMac scheme first, and only then MarzipantsMacSwift
+- Instead of running from Xcode directly, you can *build* the app from Xcode, and then:
+- Run react-native server: `npm install -g react-native; react-native start`
+- Find in Xcode the built app (in Products group, find MarzipantsMacSwift.app -> Open in Finder), copy path to it
+- Run the built app via CLI: `CFMZEnabled=1 open path-to-the-MarzipantsMacSwift.app`
+- If you open some screen you shouldn't have and you keep getting the red screen at launch, delete `~/Library/Containers/com.notjosh.MarzipantsMacSwift`

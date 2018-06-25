@@ -4,28 +4,23 @@ var _assert = require("assert");
 
 var _assert2 = _interopRequireDefault(_assert);
 
-var _babelTypes = require("babel-types");
-
-var t = _interopRequireWildcard(_babelTypes);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+var _util = require("./util.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var m = require("private").makeAccessor(); /**
-                                            * Copyright (c) 2014, Facebook, Inc.
-                                            * All rights reserved.
-                                            *
-                                            * This source code is licensed under the BSD-style license found in the
-                                            * https://raw.github.com/facebook/regenerator/master/LICENSE file. An
-                                            * additional grant of patent rights can be found in the PATENTS file in
-                                            * the same directory.
-                                            */
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
+var m = require("private").makeAccessor();
 var hasOwn = Object.prototype.hasOwnProperty;
 
 function makePredicate(propertyName, knownTypes) {
   function onlyChildren(node) {
+    var t = (0, _util.getTypes)();
     t.assertNode(node);
 
     // Assume no side effects until we find out otherwise.
@@ -56,7 +51,7 @@ function makePredicate(propertyName, knownTypes) {
   }
 
   function predicate(node) {
-    t.assertNode(node);
+    (0, _util.getTypes)().assertNode(node);
 
     var meta = m(node);
     if (hasOwn.call(meta, propertyName)) return meta[propertyName];
